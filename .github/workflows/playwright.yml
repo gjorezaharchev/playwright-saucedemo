@@ -20,7 +20,7 @@ jobs:
     - name: install dotenv
       run: npm install dotenv --save
     - name: set environment
-      run: $env:ENV="qa"
+      run: export ENV="qa"
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
